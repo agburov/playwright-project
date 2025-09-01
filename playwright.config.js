@@ -14,7 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   /* Test directory */
-  testDir: './tests/qauto',
+  testDir: './tests/qauto-pom',
   /* Output directory for test results */
   outputDir: 'test-results',
   /* Timeout for each test */
