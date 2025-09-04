@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import RegistrationPage from './pages/RegistrationPage.js';
-import { generateUniqueEmail, TEST_DATA } from './utils/testData.js';
+import { generateUniqueEmail } from './utils/email.js';
+import { TEST_DATA } from './testData.js';
 
 test.describe('Registration form - qauto with POM', () => {
   let registrationPage;

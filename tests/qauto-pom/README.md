@@ -7,8 +7,9 @@ qauto-pom/
 ├── pages/
 │   ├── BasePage.js          # Base page object with common methods
 │   └── RegistrationPage.js  # Registration page object
+├── testData.js              # Centralized test data constants
 ├── utils/
-│   └── testData.js          # Test data utilities
+│   └── email.js             # Email generator utility
 ├── registration.spec.js     # Main test file
 └── README.md
 ```
@@ -17,7 +18,8 @@ qauto-pom/
 
 - **BasePage.js** - Common methods for web pages (navigation, assertions, interactions)
 - **RegistrationPage.js** - Registration form specific methods and selectors
-- **testData.js** - Email generation and test data constants
+- **testData.js** - Centralized test data constants
+- **utils/email.js** - Email generation utility
 - **registration.spec.js** - Test scenarios for registration form
 
 ## Run Tests

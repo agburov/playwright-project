@@ -1,16 +1,6 @@
-const EMAIL_PREFIX = 'aqa';
+// Centralized test data constants for registration scenarios
+// Keep only static, reusable values here. No functions.
 
-// Generate unique, readable email for auto-tests
-function generateUniqueEmail(prefix = EMAIL_PREFIX) {
-  const timestamp = new Date()
-    .toISOString()
-    .replace(/[-:.TZ]/g, '')
-    .slice(0, 14);
-  const random = Math.random().toString(36).slice(2, 8);
-  return `${prefix}-${timestamp}-${random}@test.com`;
-}
-
-// Test data constants
 const TEST_DATA = {
   validUser: {
     name: 'John',
@@ -35,6 +25,5 @@ const TEST_DATA = {
 };
 
 module.exports = {
-  generateUniqueEmail,
   TEST_DATA,
 };
