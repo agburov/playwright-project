@@ -1,0 +1,18 @@
+# Playwright authentication files
+playwright/.auth/
+playwright/.auth/*
+
+# Environment variables
+.env
+.env.*
+
+# Test results
+test-results/
+playwright-report/
+
+# Node modules
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
