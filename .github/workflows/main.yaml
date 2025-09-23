@@ -40,6 +40,7 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}":/work \
             -v "$HOME/.npm":/root/.npm \
+            -e CI=1 \
             -w /work \
             --ipc=host \
             --entrypoint /bin/bash \
