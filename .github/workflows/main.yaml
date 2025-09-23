@@ -72,6 +72,8 @@ jobs:
       - name: Configure GitHub Pages
         if: always()
         uses: actions/configure-pages@v5.0.0
+        with:
+          enablement: true
 
       - name: Upload Pages artifact (Playwright HTML report)
         if: always()
