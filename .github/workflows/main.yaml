@@ -64,6 +64,17 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
+      - name: Upload Playwright videos
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: playwright-videos
+          path: |
+            test-results/**/*.webm
+            test-results/**/*.mp4
+          retention-days: 7
+          if-no-files-found: warn
+
       - name: Configure GitHub Pages
         if: always()
         uses: actions/configure-pages@v5.0.0
