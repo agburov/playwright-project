@@ -44,12 +44,7 @@ jobs:
             --ipc=host \
             --entrypoint /bin/bash \
             mcr.microsoft.com/playwright:v1.55.0-noble \
-            -lc 'set -euo pipefail \n\
-            && if [ -f package-lock.json ]; then npm ci; else npm i; fi >/dev/null 2>&1 \n\
-            && npx playwright install --with-deps >/dev/null 2>&1 \n\
-            && if [ -z "${SPEC:-}" ]; then SPEC="tests/qauto-pom/registration.spec.js"; fi \n\
-            && echo "Running: $SPEC" \n\
-            && npx playwright test "$SPEC" --reporter=html'
+            -lc 'set -euo pipefail && if [ -f package-lock.json ]; then npm ci; else npm i; fi >/dev/null 2>&1 && npx playwright install --with-deps >/dev/null 2>&1 && if [ -z "${SPEC:-}" ]; then SPEC="tests/qauto-pom/registration.spec.js"; fi && echo "Running: $SPEC" && npx playwright test "$SPEC" --reporter=html'
 
       - name: Upload Playwright HTML report
         if: always()
